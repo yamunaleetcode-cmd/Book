@@ -1,0 +1,149 @@
+/* General App styling */
+.App {
+  max-width: 900px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  text-align: center; /* Center title and headings */
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Title */
+.App h1 {
+  margin-bottom: 20px;
+}
+
+/* Controls container (search + categories) */
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Search input */
+.controls input[type="text"] {
+  padding: 8px 12px;
+  font-size: 16px;
+  width: 300px;
+  max-width: 90%;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Category buttons */
+.category-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.cat-btn {
+  padding: 8px 15px;
+  margin: 5px; /* spacing between buttons */
+  border: none;
+  background-color: #ddd;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.cat-btn:hover {
+  background-color: #ccc;
+}
+
+.cat-btn.active {
+  background-color: #348feb;
+  color: white;
+}
+
+/* Add book form */
+.add-book {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.add-book input {
+  padding: 8px 10px;
+  margin: 5px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.add-book button {
+  padding: 8px 15px;
+  margin: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  background-color: #348feb;
+  color: white;
+  transition: background-color 0.2s;
+}
+
+.add-book button:hover {
+  background-color: #216fc0;
+}
+
+/* Table styling */
+.book-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.book-table th, .book-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center; /* center align table content */
+}
+
+.book-table th {
+  background-color: #348feb;
+  color: white;
+}
+
+.delete {
+  background-color: red;
+  color: white;
+  margin-left: 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.delete:hover {
+  background-color: darkred;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .controls input[type="text"] {
+    width: 90%;
+  }
+
+  .add-book {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .add-book input, .add-book button {
+    width: 90%;
+    margin: 5px 0;
+  }
+
+  .book-table th, .book-table td {
+    padding: 8px;
+    font-size: 13px;
+  }
+}
